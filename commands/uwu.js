@@ -5,7 +5,6 @@ const uwuChannelID = "898605369411133472"
 class uwuCommand extends Command {
     constructor() {
         super('uwu', {
-            aliases: ['uwu'],
         });
     }
 
