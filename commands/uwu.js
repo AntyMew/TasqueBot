@@ -1,6 +1,6 @@
 const { Command } = require('discord-akairo');
 
-const uwuChannelID = "898605369411133472"
+const uwuChannelID = ""             // channel ID for uwu channel goes here
 
 class uwuCommand extends Command {
     constructor() {
