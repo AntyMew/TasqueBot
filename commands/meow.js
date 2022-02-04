@@ -1,6 +1,6 @@
 const { Command } = require('discord-akairo');
 
-class AddCommand extends Command {
+class MeowCommand extends Command {
     constructor() {
         super('meow', {
             aliases: ['meow'],
@@ -8,7 +8,7 @@ class AddCommand extends Command {
                 {
                     id: 'input',
                     type: 'string',
-                    default: ''
+                    match: 'content'
                 }
             ]
         });
@@ -35,4 +35,4 @@ class AddCommand extends Command {
     }
 }
 
-module.exports = AddCommand;
+module.exports = MeowCommand;
