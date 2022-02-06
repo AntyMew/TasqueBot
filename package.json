@@ -1,11 +1,11 @@
 {
   "dependencies": {
     "@discordjs/builders": "^0.12.0",
-    "agenda": "^4.2.1",
+    "bull": "^4.5.0",
     "chrono-node": "^2.3.6",
-    "discord-akairo": "^8.1.0",
-    "discord-reply": "^0.1.2",
-    "discord.js": "^12.5.3",
+    "discord-akairo": "github:discord-akairo/discord-akairo",
+    "discord.js": "^13.6.0",
+    "redis": "^4.0.3",
     "sqlite": "^4.0.23"
   },
   "name": "tasquebot",

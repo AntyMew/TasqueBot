@@ -30,8 +30,7 @@ class MeowCommand extends Command {
             reply += ' ';
         });
 
-        reply += `(${args.input})`;
-        return message.lineReply(reply);
+        return message.reply(reply);
     }
 }
 

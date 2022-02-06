@@ -9,7 +9,7 @@ class PingCommand extends Command {
     }
 
     exec(message) {
-        return message.lineReply('Pong!');
+        return message.reply('Pong!');
     }
 }
 

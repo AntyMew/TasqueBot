@@ -19,21 +19,21 @@ class RemindCommand extends Command {
 
     exec(message, args) {
         if (!args.input)
-            return message.lineReply('What do you want to be reminded about and when?');
+            return message.reply('What do you want to be reminded about and when?');
 
         const results = chrono.parse(args.input, Date.now(), { forwardDate: true });
 
         if (!results || !results[0])
-            return message.lineReply('Could not parse time!');
+            return message.reply('Could not parse time!');
 
         const result = results[0];
         const reminder = args.input.replace(result.text, '').trim();
         const time = result.date();
 
         if (!reminder)
-            return message.lineReply('What do you want to be reminded about?');
+            return message.reply('What do you want to be reminded about?');
 
-        return message.lineReply(`"${reminder}" ${discordTime(time, 'R')}`);
+        return message.reply(`"${reminder}" ${discordTime(time, 'R')}`);
     }
 }
 

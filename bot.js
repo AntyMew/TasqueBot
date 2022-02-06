@@ -1,6 +1,5 @@
 const { AkairoClient, CommandHandler } = require('discord-akairo');
 const { Intents } = require('discord.js');
-require('discord-reply');
 const { token } = require('./secret.json');
 
 class TasqueClient extends AkairoClient {
@@ -9,7 +8,7 @@ class TasqueClient extends AkairoClient {
             ownerID: '119926342111330304'
         }, {
             disableMentions: 'everyone',
-            intents: [Intents.FLAGS.GUILDS]
+            intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES]
         });
 
         this.commandHandler = new CommandHandler(this, {
@@ -17,10 +16,13 @@ class TasqueClient extends AkairoClient {
             prefix: '!',
             defaultCooldown: 1000
         });
+    }
 
+    init() {
         this.commandHandler.loadAll();
+        client.login(token);
     }
 }
 
 const client = new TasqueClient();
-client.login(token);
+client.init();
