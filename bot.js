@@ -1,6 +1,6 @@
 const { AkairoClient, CommandHandler } = require("discord-akairo");
 const { Intents } = require("discord.js");
-const { token } = require("./secret.json");
+const { database, token } = require("./secret.json");
 
 class TasqueClient extends AkairoClient {
     constructor() {
@@ -15,7 +15,12 @@ class TasqueClient extends AkairoClient {
             directory: "./commands/",
             prefix: "!",
             defaultCooldown: 1000
+        }).on("load", (command, isReload) => {
+            if (typeof command.load === "function")
+                command.load(isReload);
         });
+
+        this.dbOptions = database;
     }
 
     init() {
