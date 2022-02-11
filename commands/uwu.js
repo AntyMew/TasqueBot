@@ -1,22 +1,20 @@
 const { Command } = require('discord-akairo');
 
-const uwuChannelID = ""             // channel ID for uwu channel goes here
-
-class uwuCommand extends Command {
+class UwuCommand extends Command {
     constructor() {
-        super('uwu', {
-        });
+        super('uwu');
+        this.channels = {}
     }
 
-    condition(message){
-        if(message.channel.id == uwuChannelID && message.content.includes("uwu")){  
-            return true;
+    condition(message) {
+        if (message.inGuild() && this.channels[message.guildId] === message.channelId) {
+            return message.content.includes("uwu");
         }
     }
 
     exec(message) {
-        return message.lineReply("uwu");
+        return message.reply("uwu");
     }
 }
 
-module.exports = uwuCommand;
+module.exports = UwuCommand;
