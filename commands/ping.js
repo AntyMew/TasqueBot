@@ -1,15 +1,15 @@
-const { Command } = require('discord-akairo');
+const { Command } = require("discord-akairo");
 
 class PingCommand extends Command {
     constructor() {
-        super('ping', {
-           aliases: ['ping'],
+        super("ping", {
+           aliases: ["ping"],
            ratelimit: 1
         });
     }
 
     exec(message) {
-        return message.reply('Pong!');
+        return message.reply("Pong!");
     }
 }
 

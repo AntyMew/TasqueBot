@@ -1,8 +1,8 @@
-const { Command } = require('discord-akairo');
+const { Command } = require("discord-akairo");
 
 class UwuCommand extends Command {
     constructor() {
-        super('uwu');
+        super("uwu");
         this.channels = {}
     }
 

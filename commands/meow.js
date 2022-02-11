@@ -1,33 +1,33 @@
-const { Command } = require('discord-akairo');
+const { Command } = require("discord-akairo");
 
 class MeowCommand extends Command {
     constructor() {
-        super('meow', {
-            aliases: ['meow'],
+        super("meow", {
+            aliases: ["meow"],
             args: [
                 {
-                    id: 'input',
-                    type: 'string',
-                    match: 'content'
+                    id: "input",
+                    type: "string",
+                    match: "content"
                 }
             ]
         });
     }
 
     exec(message, args) {
-        var reply = '';
+        var reply = "";
 
         if (!args.input)
-            reply = 'meow';
+            reply = "meow";
 
         var input = new TextEncoder().encode(args.input);
         input.forEach(x => {
             for (var i = 0; i < 8; i++) {
-                reply += (x & 0x80) ? 'ow' : 'me';
+                reply += (x & 0x80) ? "ow" : "me";
                 x <<= 1;
             }
             
-            reply += ' ';
+            reply += " ";
         });
 
         return message.reply(reply);
