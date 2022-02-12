@@ -30,7 +30,12 @@ class MeowCommand extends Command {
             reply += " ";
         });
 
-        return message.reply(reply);
+        return message.reply({
+            content: reply,
+            allowedMentions: {
+                repliedUser: false
+            }
+        });
     }
 }
 

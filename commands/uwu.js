@@ -13,7 +13,12 @@ class UwuCommand extends Command {
     }
 
     exec(message) {
-        return message.reply("uwu");
+        return message.reply({
+            content: "uwu",
+            allowedMentions: {
+                repliedUser: false
+            }
+        });
     }
 }
 

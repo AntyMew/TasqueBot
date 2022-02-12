@@ -9,7 +9,12 @@ class PingCommand extends Command {
     }
 
     exec(message) {
-        return message.reply("Pong!");
+        return message.reply({
+            content: "Pong!",
+            allowedMentions: {
+                repliedUser: false
+            }
+        });
     }
 }
 

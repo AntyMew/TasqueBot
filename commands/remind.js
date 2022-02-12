@@ -56,7 +56,13 @@ class RemindCommand extends Command {
 
         const delay = Math.max(date.getTime() - Date.now(), 0);
         this.queue.add(data, { delay: delay });
-        return message.reply(`"${reminder}" ${time(date, "R")}`);
+
+        return message.reply({
+            content: `"${reminder}" ${time(date, "R")}`,
+            allowedMentions: {
+                repliedUser: false
+            }
+        });
     }
 }
 
