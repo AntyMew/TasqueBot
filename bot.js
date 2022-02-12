@@ -25,9 +25,17 @@ class TasqueClient extends AkairoClient {
 
     init() {
         this.commandHandler.loadAll();
-        client.login(token);
+        this.login(token);
     }
 }
 
 const client = new TasqueClient();
 client.init();
+
+function exit() {
+    client.destroy();
+    process.exit();
+}
+
+process.on("SIGINT", exit);
+process.on("SIGTERM", exit);
