@@ -1,0 +1,12 @@
+[
+    {"label": "Alaska Standard Time", "value": "America/Anchorage"},
+    {"label": "Central Standard Time", "value": "America/Regina"},
+    {"label": "Eastern Greenland Time", "value": "America/Scoresbysund"},
+    {"label": "Eastern Standard Time", "value": "America/Cancun"},
+    {"label": "Hawaii-Aleutian Standard Time", "value": "Pacific/Honolulu"},
+    {"label": "Mountain Standard Time", "value": "America/Hermosillo"},
+    {"label": "Newfoundland Standard Time", "value": "Canada/Newfoundland"},
+    {"label": "Pacific Standard Time", "value": "America/Tijuana"},
+    {"label": "Saint Pierre and Miquelon Standard Time", "value": "America/Miquelon"},
+    {"label": "Western Greenland Time", "value": "America/Nuuk"}
+]

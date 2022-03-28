@@ -1,0 +1,12 @@
+[
+    {"label": "Africa", "value": "AfricaTZs"},
+    {"label": "Antarctica", "value": "AntarcticaTZs"},
+    {"label": "Asia", "value": "AsiaTZs"},
+    {"label": "Atlantic", "value": "AtlanticTZs"},
+    {"label": "Carribean", "value": "CarribeanTZs"},
+    {"label": "Europe", "value": "EuropeTZs"},
+    {"label": "North America", "value": "NorthAmericaTZs"},
+    {"label": "Oceana", "value": "OceanaTZs"},
+    {"label": "Pacific", "value": "PacificTZs"},
+    {"label": "South America", "value": "SouthAmericaTZs"}
+]

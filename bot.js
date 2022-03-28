@@ -1,4 +1,5 @@
-const { AkairoClient, CommandHandler } = require("discord-akairo");
+
+const { AkairoClient, CommandHandler, ListenerHandler } = require("discord-akairo");
 const { Intents } = require("discord.js");
 const { database, token } = require("./secret.json");
 
@@ -19,15 +20,21 @@ class TasqueClient extends AkairoClient {
             if (typeof command.load === "function")
                 command.load(isReload);
         });
+        this.listenerHandler = new ListenerHandler(this, {
+            directory: './listeners/'
+        });
 
         this.dbOptions = database;
     }
 
     init() {
+        this.commandHandler.useListenerHandler(this.listenerHandler);
+        this.listenerHandler.loadAll();
         this.commandHandler.loadAll();
         this.login(token);
     }
 }
+
 
 const client = new TasqueClient();
 client.init();

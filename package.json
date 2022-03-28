@@ -4,8 +4,9 @@
     "bull": "^4.5.0",
     "chrono-node": "^2.3.6",
     "discord-akairo": "github:discord-akairo/discord-akairo",
-    "discord.js": "^13.6.0",
-    "redis": "^4.0.3",
+    "discord.js": "13.6",
+    "moment-timezone": "^0.5.34",
+    "redis": "^4.0.4",
     "sqlite": "^4.0.23"
   },
   "name": "tasquebot",
