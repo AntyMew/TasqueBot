@@ -1,8 +1,0 @@
-[
-    {"label": "Davis Time", "value": "Antarctica/Davis"},
-    {"label": "Dumont d'Urville Time", "value": "Antarctica/DumontDUrville"},
-    {"label": "Mawson Station Time", "value": "Antarctica/Mawson"},
-    {"label": "Rothera Research Station Time", "value": "Antarctica/Rothera"},
-    {"label": "Showa Station Time", "value": "Antarctica/Syowa"},
-    {"label": "Vostok Station Time", "value": "Antarctica/Vostok"}
-]

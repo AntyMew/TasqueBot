@@ -20,6 +20,7 @@ class TasqueClient extends AkairoClient {
             if (typeof command.load === "function")
                 command.load(isReload);
         });
+
         this.listenerHandler = new ListenerHandler(this, {
             directory: './listeners/'
         });
